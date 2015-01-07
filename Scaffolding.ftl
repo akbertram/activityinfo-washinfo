@@ -11,17 +11,17 @@
   <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 
   <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
 
-  <link rel="stylesheet" href="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/css/site.css">
-  <link rel="stylesheet" href="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/css/prettify.css">
+  <link rel="stylesheet" href="https://bedatadriven.github.io/activityinfo-washinfo/css/site.css">
+  <link rel="stylesheet" href="https://bedatadriven.github.io/activityinfo-washinfo/css/prettify.css">
   <link href="//www.activityinfo.org/favicon.ico" rel="icon" type="image/x-icon">
   
-  <link rel="stylesheet" href="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/css/font-humanitarian.css">
+  <link rel="stylesheet" href="https://bedatadriven.github.io/activityinfo-washinfo/css/font-humanitarian.css">
   <!--[if IE 7]>
-  <link rel="stylesheet" href="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/css/font-humanitarian-ie7.min.css">
+  <link rel="stylesheet" href="https://bedatadriven.github.io/activityinfo-washinfo/css/font-humanitarian-ie7.min.css">
   <![endif]-->
   <!-- Le fav and touch icons -->
 </head>
@@ -58,7 +58,7 @@
  
             <p>Developed as part of IRC's <a href="http://www.ircwash.org/projects/brac-wash-ii-dgis-and-bmgf">BRAC WASH II programme</a>, with the support of the Netherlands <a href="government.nl/ministries/bz">Ministry of Foreign Affairs</a> and the 
             <a href="#">Bill and Melinda Gates Foundation</a></p>
-            <p><a class="brand" href="http://about.activityinfo.org" style="" target="_blank"><img src="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/img/logo-shadow.png"><span> About ActivityInfo</span></a></p>
+            <p><a class="brand" href="https://about.activityinfo.org" style="" target="_blank"><img src="https://bedatadriven.github.io/activityinfo-washinfo/img/logo-shadow.png"><span> About ActivityInfo</span></a></p>
              <p>ActivityInfo is developed by <a href="http://www.bedatadriven.com" target="_blank">BeDataDriven</a>.</p>
             </p>
           </div>
@@ -66,12 +66,12 @@
       </div>
     </footer>
 
-<script src="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/js/jquery-1.7.1.min.js"></script>
-<script src="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/js/underscore.min.js"></script>
-<script src="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/js/backbone.min.js"></script>
-<script src="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/js/prettify.min.js"></script>
-<script src="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/js/bootstrap-222.min.js"></script>
-<script src="//commondatastorage.googleapis.com/activityinfo-syrianrefugeeresponse/js/index/index.js"></script>
+<script src="https://bedatadriven.github.io/activityinfo-washinfo/js/jquery-1.7.1.min.js"></script>
+<script src="https://bedatadriven.github.io/activityinfo-washinfo/js/underscore.min.js"></script>
+<script src="https://bedatadriven.github.io/activityinfo-washinfo/js/backbone.min.js"></script>
+<script src="https://bedatadriven.github.io/activityinfo-washinfo/js/prettify.min.js"></script>
+<script src="https://bedatadriven.github.io/activityinfo-washinfo/js/bootstrap-222.min.js"></script>
+<script src="https://bedatadriven.github.io/activityinfo-washinfo/js/index/index.js"></script>
 
 <script type="text/javascript">		
 	var enableForm = function(enabled) {
