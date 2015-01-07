@@ -1,5 +1,5 @@
 
-Custom branding for syrianrefugeeresponse.org
+Custom branding for washinfo.org
 
 There are two key files that live on the ActivityInfo.org application 
 server:
@@ -9,20 +9,9 @@ server:
     
   - HomePageBody.html: Static HTML that is served for the root.
   
-  
-The rest are static files and must be hosted somewhere else (with HTTPS support).
-We are currently stroring them on a Google Cloud Storage (GCS) bucket, but it could be 
-anywhere. 
 
-Cross-Origin Headers
-====================
+These two files have to be uploaded to activityinfo.org.
 
-FireFox applies the same-origin security policy to webfonts, so in order for 
-the humanitarian webfont to be served from the static content host, the static
-content host must serve the fonts with the Allow-Origin header. 
-
-For GCS, the policy is defined in cors.xml and can be set using:
-
-    gsutil setcors cors.xml gs://activityinfo-syrianrefugeeresponse
+The rest are static files and can be hosted using GitHub pages.
 
 
