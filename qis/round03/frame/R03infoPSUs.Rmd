@@ -1,0 +1,32 @@
+# Information on PSU   
+These are the data sets that need to be merged with the collected data. The unique ID is on of the first columns. CD128 are the characters required to create the barcode in the mail merge which why they look unreadable.  You prefered the weighting to be done in AI so let us know what you prefer, merge the data yourself or point us to a place that explains how to merge these ourselves.
+For the weighting the same thing. The weight will need to be recalculated later when the dataset are finalised so whatever is the easiest to do.  For the HH survey (the only one that needs weighting) I also made an error in the weight calculations I described earlier.  The weighting is first by the number of HH interviewed in the wealth category per VWC, The second is the weighting by the number of HH in each of these categories. For  Ultra Poor col "O",  Poor col "P",  NonPoor col "Q". Apologies for this error.
+Shishir went over the top with his naming of PSU. All is now a PSU reference ;-).  Just o make sure there is no confusion as there is much more infor there than required for the analysis.   
+
+## In the household survey:
+* WASH 1 IDs (col B) start with 1, WASH 2 start with a 2 or
+* PSU var (col D) 14&15 ->WASH I; 25&26 -> WASH II
+* Shishir ==> HH- Psu-14&15 wash I PSU 25&26 wash II
+* In each of the WASH surveys the PSUs are PSU_VWC (col J) and are numbered  00-99
+* The wealth categories are NP, PP, UP with each group 6 HH sampled, so 18 HH per VWC.
+
+## In the school survey:
+* WASH 1 IDs (col A) start with 4, WASH 2 start with a 5 or
+* PSU var (col C) 41 ->WASH I; 51&52 -> WASH II
+* Shishir: SCHOOL PSU 41 & 42 wash I PSU 51 &52 wash II
+* In each of the WASH surveys the PSUs are PSU_UNION (col G) and are numbered  01-98, There are no 100 unions as some of the selected VWCs fell in the same union
+* This is a self weighted one stage sample so no weighting required 
+
+## In the VWC survey:
+* WASH 1 IDs (col B as num, C as txt) start with 1, WASH 2 start with a 2 or
+* PSU var (col E) 14 ->WASH I; 25&26 -> WASH II
+* Shishir ==> VWC PSU 14 & 15 WASH I PSU 25 & 26 WASH 
+* In each of the WASH surveys the PSUs are PSU_VWC (col G) and are numbered  00-99,
+* This is a self weighted one stage sample so no weighting required 
+
+## In the RSC survey:
+* WASH 1 IDs (col A) start with 1, WASH 2 start with a 2 or
+* PSU var (col D) 10&14 ->WASH I; 20&21 -> WASH II
+* RSC PSU 10&11 Wash I PSU 20 & 21
+* In each of the WASH surveys the PSUs are PSU_UNION (col G) and are numbered  01-98, There  are no 100 unions as some of the selected VWCs fell in the same union
+* This is a self weighted one stage sample so no weighting required 
