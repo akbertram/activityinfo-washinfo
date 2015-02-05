@@ -1,6 +1,6 @@
 
 vwc <- readRDS("qis/round01/vwc.rds")
-vwcTypeId <- 50918
+vwcTypeId <- 51036
 
 for(i in 1:nrow(vwc)) {
   
