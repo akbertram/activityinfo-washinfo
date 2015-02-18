@@ -4,9 +4,18 @@
 require("activityinfo")
 
 # get locations of type "QIS VWC" in Bangladesh:
+cat("...Downloading 'QIS VWC' locations from ActivityInfo...")
 locations <- getLocations(51036)
 
-# define a helper function:
+# define helper functions:
+getEntityId <- function(loc, id) {
+  if (!is.null(loc$adminEntities[[id]])) {
+    loc$adminEntities[[id]]$id
+  } else {
+    NA_integer_
+  }
+}
+
 getEntityName <- function(loc, id) {
   if (!is.null(loc$adminEntities[[id]])) {
     loc$adminEntities[[id]]$name
@@ -22,8 +31,11 @@ location.table <-
                         function(loc) {
                           data.frame(name = loc$name,
                                      locationId = loc$id,
+                                     divisionId = getEntityId(loc, "1267"),
                                      division = getEntityName(loc, "1267"),
+                                     districtId = getEntityId(loc, "1523"),
                                      district = getEntityName(loc, "1523"),
+                                     upazilaId = getEntityId(loc, "1534"),
                                      upazila  = getEntityName(loc, "1534"),
                                      stringsAsFactors = FALSE)
                         }))
