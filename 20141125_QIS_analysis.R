@@ -38,8 +38,6 @@ forms <- list(
     )
   )
 
-# Login to Activity info
-activityInfoLogin("shahinur.is@brac.net","testing123")
 activityInfoRootUrl("https://build42-dot-ai-production.appspot.com")
 
 # A function to extract the activity/form from which we want to export the data from AI:
