@@ -60,7 +60,7 @@ mergeAdminLevels <- function(x, districtColumn, upazillaColumn, rename = list())
   names(matches) <- uniqueSourceKey
   
   if(any(is.na(matches))) {
-    stop(sprintf("Could not match:\n %s\n", paste(key[is.na(matches)], collapse="\n")))
+    stop(sprintf("Could not match:\n %s\n", paste(uniqueSourceKey[is.na(matches)], collapse="\n")))
   }
   
   # Find the indexes within the lookup table for each source row
