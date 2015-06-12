@@ -35,34 +35,13 @@ attachments <- merge(images, hh.barcodes)
 library(uuid)
 attachments$blobId <- replicate(toupper(UUIDgenerate()), n = nrow(attachments))
 
+# Divide into chunks to be uploaded in parallel
+attachments$chunk <- as.integer(cut(1:nrow(attachments), breaks = 20))
 
-# Upload images as attachments
+write.csv(file="qis/round03/images.csv", attachments)
 
-library(httr)
-for(i in 28:nrow(attachments)) {
-  with(attachments[i, ], {
-  sourceFile <-  file.path("qis", "round03", "images", attachments$cuid[i])
-  
-  if(!file.exists(sourceFile)) {
-    cat(sprintf("Could not find blob %s for site %d (barcode %s)\n", cuid, siteId, barcode ))
-  } else {
-    imageFile =  sprintf("/tmp/%s-%s", barcode, fileName)
-    file.copy(sourceFile, imageFile)
-    
-    cat(sprintf("Uploading %s...\n", imageFile))
-    
-  
-    POST(url = "https://www.activityinfo.org/ActivityInfo/attachment",
-      activityinfo:::activityInfoAuthentication(),
-      encode = "multipart",
-      query = list(siteId = siteId, blobId = blobId),
-      body = list(file = upload_file(imageFile)))
-  
-    }
-  })
-}
-
-
+writeLines(con="qis/round03/upload_images.sh", 
+           sprintf("Rscript upload_images.R %d > chunk%d.log &\n", unique(attachments$chunk), unique(attachments$chunk)))
 
                      
                      
