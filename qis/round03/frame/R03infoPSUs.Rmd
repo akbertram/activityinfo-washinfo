@@ -12,9 +12,9 @@ Shishir went over the top with his naming of PSU. All is now a PSU reference ;-)
 
 ## In the school survey:
 * WASH 1 IDs (col A) start with 4, WASH 2 start with a 5 or
-* PSU var (col C) 41 ->WASH I; 51&52 -> WASH II
+* PSU var (col C) 41 & 42 ->WASH I; 51&52 -> WASH II
 * Shishir: SCHOOL PSU 41 & 42 wash I PSU 51 &52 wash II
-* In each of the WASH surveys the PSUs are PSU_UNION (col G) and are numbered  01-98, There are no 100 unions as some of the selected VWCs fell in the same union
+* In each of the WASH areas the PSUs are PSU_UNION (col G) and are numbered  01-98, There are no 100 unions as some of the selected VWCs fell in the same union
 * This is a self weighted one stage sample so no weighting required 
 
 ## In the VWC survey:
