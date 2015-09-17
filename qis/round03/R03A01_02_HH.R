@@ -24,6 +24,7 @@ hh <- merge(raw[order(raw$Barcode),], frame, by = "Barcode", all.x = TRUE)
 # change names from ABC_DEFG to abc.defg
 names(hh) <- gsub(x=tolower(names(hh)), pattern="_", replace=".")
 
+
 # create a list by splitting the table per VWC:
 vwc.list <- split(hh, hh$vwc)
 
@@ -84,6 +85,8 @@ write.table(res[["Akhilpur"]][c("barcode", "vwc", "wealth", "ultra.poor", "poor"
 
 # put the household table back together:
 hh.weighted <- do.call(rbind, res)
+
+
 write.table(hh.weighted,
             file = paste(base.name, "weighted.csv", sep = "_"),
             row.names = FALSE,

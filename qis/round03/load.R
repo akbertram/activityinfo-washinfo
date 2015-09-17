@@ -10,6 +10,8 @@ hh <- merge(hh.weighted, location.table[, c("vwc.key", "locationId")], all.x=T)
 hh <- hh[!duplicated(hh$barcode), ]
 
 
+
+
 # Define common order of levels
 wealthLevels <- c("UP", "PP", "NP")
 
@@ -61,7 +63,20 @@ hh.clean <- data.frame(
   hh07.ftr = score(hh, "hh07.ftr"),
   remarks = hh$remarks,
   stringsAsFactors = FALSE)
+
+for(x in grep(pattern = "^hh0", x = names(hh.clean), value = TRUE)) {
+  hh.clean[[paste("b", x, sep = "")]] <- factor(ifelse(hh.clean[[x]] %in% c("A", "B", "C"), "At or Above Standard", "Below standard"))
+}
+
+vwc.clean <- data.frame(
+  id = replicate(n = nrow(vwc), expr = generateId()),
+  locationId = vwc$locationId,
   
+
 sites <- prepareForm(databaseId = 2188, name = "QIS3_9", locationTypeId=51036, data = hh.clean)
 loadForm(sites)
+
+
+
+
 

@@ -17,13 +17,18 @@ rsc$reportingPeriodId <- generateId(n = nrow(rsc))
 
 # Create location objects first
 for(i in 1:nrow(rsc)) {
-  location <- c(rsc[i, c("E1267", "E1523", "E1534")])
+  location <- unclass(c(rsc[i, c("E1267", "E1523", "E1534")]))
   location$name <- as.character(rsc$Name_RSC[i])
   location$id <- rsc$locationId[i]
-  location$axe <- as.character(rsc$PSU[i])
+  location$axe <- NULL
   location$locationTypeId <- rscLocationTypeId
-  location$longitude <- rsc$Latitude.Longitude...Longitude
-  location$latitude <- rsc$Latitude.Longitude...Latitude
+  location$longitude <- rsc$Latitude.Longitude...Longitude[i]
+  location$latitude <- rsc$Latitude.Longitude...Latitude[i]
+  
+  if(is.na(location$longitude) || is.na(location$latitude)) {
+    location$longitude <- NULL
+    location$latitude <- NULL
+  }
   
   if(nchar(location$name) > 50) {
     location$name <- substr(location$name, 1, 50)
@@ -60,9 +65,15 @@ for(var in names(rscSites)) {
   }
 }
 
-sites <- prepareForm(rscSites, databaseId = 2188, name = "rscs", locationTypeId = rscLocationTypeId)
+sites <- prepareForm(rscSites, databaseId = 2188, name = "QIS 3 RSC", locationTypeId = rscLocationTypeId)
+sites$id <- generateId(n = nrow(sites))
 loadForm(sites)
 
+for(x in names(sites)) {
+  if(is.factor(sites[[x]])) {
+    sites[[x]] <- as.character(sites[[x]])
+  }
+}
 
-
+sites[['I2147154614']] <- as.character(sites$I2147154614)
 
